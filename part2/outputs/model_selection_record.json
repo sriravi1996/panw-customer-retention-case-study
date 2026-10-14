@@ -1,0 +1,101 @@
+{
+  "selection_criterion": "average_precision on model_selection split (2025-04-01)",
+  "simplicity_tolerance": 0.005,
+  "selected_model": {
+    "experiment": "full_context",
+    "model_type": "hgb",
+    "ms_ap": 0.32819,
+    "config": "d=3 l=15 s=20 i=100 cw=None",
+    "artifact": "full_context_hgb.pkl",
+    "num_features": [
+      "deployment_reach_30d",
+      "onboarding_delay_days",
+      "workflow_success_30d",
+      "productive_use_delta_30d",
+      "unresolved_customer_impact_hours_90d",
+      "repeat_sla_breaches_90d",
+      "p1_tickets_90d",
+      "open_tickets_90d",
+      "avg_open_age_hrs_90d",
+      "avg_resolution_hrs_90d",
+      "avg_coverage_90d",
+      "coverage_trend_90d",
+      "obs_completeness_90d",
+      "quoted_unit_price_change_pct",
+      "dated_budget_concern",
+      "days_without_confirmed_owner",
+      "overdue_agreed_actions",
+      "days_to_renewal",
+      "tenure_days",
+      "avg_resolution_hrs_90d_missing",
+      "deployment_reach_30d_missing",
+      "workflow_success_30d_missing",
+      "days_since_last_interaction_missing",
+      "median_prior_renewal_delay_missing",
+      "employee_count",
+      "acv",
+      "total_acv_in_window",
+      "n_products_in_window",
+      "n_families_in_window",
+      "n_active_products_in_family",
+      "family_sibling_cancellations_1yr",
+      "family_adoption_completeness",
+      "executive_interactions_180d",
+      "marketing_engagements_180d",
+      "days_since_last_interaction",
+      "median_prior_renewal_delay_days",
+      "tickets_90d",
+      "policy_events_per_unit_90d",
+      "remediation_velocity_90d",
+      "automation_adoption_90d",
+      "scan_success_rate_90d"
+    ],
+    "cat_features": [
+      "product_family",
+      "size_segment",
+      "industry",
+      "region"
+    ]
+  },
+  "deployment_policy": "full_context_hgb",
+  "deployment_policy_note": "full_context_hgb used as deployment policy and ML challenger.",
+  "baseline_aps": {
+    "prevalence": 0.05174,
+    "rule": 0.211209
+  },
+  "experiment_best_aps": {
+    "experience_led": {
+      "best_ms_ap": 0.300159,
+      "best_config": "d=3 l=15 s=20 i=100 cw=balanced",
+      "model_type": "hgb"
+    },
+    "size_value": {
+      "best_ms_ap": 0.074503,
+      "best_config": "d=3 l=15 s=20 i=100 cw=None",
+      "model_type": "hgb"
+    },
+    "full_context": {
+      "best_ms_ap": 0.32819,
+      "best_config": "d=3 l=15 s=20 i=100 cw=None",
+      "model_type": "hgb"
+    }
+  },
+  "final_test_note": "Calendar windows were previously inspected in the original project. The current seed-137 population was generated after the synthetic scenario was frozen. This demonstrates known synthetic mechanisms, not real PANW performance.",
+  "train_counts": {
+    "n_train": 4762,
+    "n_positives": 286,
+    "prevalence": 0.060059
+  },
+  "ms_counts": {
+    "n_ms": 2242,
+    "n_positives": 116,
+    "prevalence": 0.05174
+  },
+  "refit": {
+    "description": "post-selection refit on train + model_selection combined",
+    "n_refit": 7004,
+    "n_refit_positives": 402,
+    "artifact": "full_context_hgb_refitted.pkl",
+    "note": "Combined train and model_selection: 7,004 rows, 402 cancellations. No calibration or final-test labels are included in this refit."
+  }
+}

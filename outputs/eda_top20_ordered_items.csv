@@ -1,0 +1,21 @@
+product_id,product_name,product_family,offering_type,distinct_order_count,ordered_units,distinct_companies,net_sales_value,rank
+SUP-ENH,Enhanced Support,Support,support,12713,12713,4758,407863316,1
+CN-SERIES,CN-Series Container NGFW,Strata,subscription,7560,301233,3067,273566526,2
+VM-SERIES,VM-Series vNGFW,Strata,subscription,5949,302522,2074,662540867,3
+SUP-PREM,Premium Support,Support,support,3764,3764,1384,249174575,4
+XDR,Cortex XDR,Cortex,subscription,3379,6760338,1077,633227237,5
+GP,GlobalProtect,SASE,subscription,3105,2295263,1095,262911980,6
+PA-ACCESS-U,Prisma Access Mobile Users,SASE,subscription,2878,1734138,1046,386759370,7
+PA-ACCESS-N,Prisma Access Remote Networks,SASE,subscription,2786,2220405,982,480649615,8
+PA-ENT,PA-Series NGFW Enterprise,Strata,hardware,2428,3757,2428,155237266,9
+PC-CSPM,Prisma Cloud CSPM,Prisma,subscription,2279,91897,772,406917534,10
+PC-CWP,Prisma Cloud CWP,Prisma,subscription,2238,586016,746,1930447287,11
+PA-SMB,PA-Series NGFW SMB,Strata,hardware,1954,3133,1954,22925142,12
+XSOAR,Cortex XSOAR,Cortex,subscription,1882,30698,724,428483937,13
+XPANSE,Cortex Xpanse,Cortex,subscription,1162,1469210,505,64093134,14
+PC-APPSEC,Prisma Cloud AppSec,Prisma,subscription,1019,20277,432,181937182,15
+PC-DSPM,Prisma Cloud DSPM,Prisma,subscription,702,5145,361,28289618,16
+XSIAM,Cortex XSIAM,Cortex,subscription,675,2627,373,70964284,17
+PS-SMB,Professional Services SMB,Services,services,517,517,517,12105429,18
+PS-ENT,Professional Services Enterprise,Services,services,508,508,508,71387780,19
+CC,Cortex Cloud,Prisma,subscription,126,6114,107,6983780,20

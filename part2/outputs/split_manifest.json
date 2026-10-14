@@ -1,0 +1,42 @@
+{
+  "train": {
+    "n_rows": 4762,
+    "n_positives": 286,
+    "n_negatives": 4476,
+    "n_labeled": 4762,
+    "prevalence": 0.0601,
+    "total_acv": 376079033.29
+  },
+  "model_selection": {
+    "n_rows": 2242,
+    "n_positives": 116,
+    "n_negatives": 2126,
+    "n_labeled": 2242,
+    "prevalence": 0.0517,
+    "total_acv": 165665314.86
+  },
+  "calibration": {
+    "n_rows": 2665,
+    "n_positives": 120,
+    "n_negatives": 2545,
+    "n_labeled": 2665,
+    "prevalence": 0.045,
+    "total_acv": 198674327.3
+  },
+  "final_test": {
+    "n_rows": 3139,
+    "n_positives": 141,
+    "n_negatives": 2998,
+    "n_labeled": 3139,
+    "prevalence": 0.0449,
+    "total_acv": 209366183.23
+  },
+  "scoring": {
+    "n_rows": 3223,
+    "n_positives": 0,
+    "n_negatives": 0,
+    "n_labeled": 0,
+    "prevalence": null,
+    "total_acv": 233685007.3
+  }
+}

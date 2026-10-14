@@ -1,0 +1,18 @@
+{
+  "part1_run_id": "025c13a1-7008-4dd2-9ab6-a2758790478c",
+  "expected_run_id": "82927c54-85b2-4dc1-aee9-dba8a32815ca",
+  "run_id_match": false,
+  "approach": "per-contract v2: all features from raw files at pred_date",
+  "obs_start": "2021-10-01",
+  "obs_end": "2026-10-01",
+  "total_eligible": 23091,
+  "n_labeled": 19868,
+  "n_scoring_queue": 3223,
+  "n_positives": 1014,
+  "cancellation_rate": 0.051,
+  "n_future_opportunities": 10161,
+  "n_decision_known": 0,
+  "gate_no_null_ids": true,
+  "gate_no_duplicate_ids": true,
+  "gate_no_prohibited_cols": true
+}

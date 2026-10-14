@@ -1,0 +1,16 @@
+policy,capacity_n_accounts,n_churned_accounts_found,churned_acv_capture_pct,random_baseline_acv_capture_pct,lift_vs_random
+deploy_score,25,10,0.0348,0.0103,3.385
+deploy_risk_weighted_acv,25,6,0.2328,0.0103,22.628
+rule_score,25,4,0.0228,0.0103,2.215
+rule_risk_weighted_acv,25,0,0.0,0.0103,0.0
+commercial_baseline,25,0,0.0,0.0103,0.0
+deploy_score,50,21,0.0816,0.0206,3.967
+deploy_risk_weighted_acv,50,11,0.3283,0.0206,15.956
+rule_score,50,10,0.1025,0.0206,4.984
+rule_risk_weighted_acv,50,3,0.102,0.0206,4.956
+commercial_baseline,50,0,0.0,0.0206,0.0
+deploy_score,100,42,0.2671,0.0412,6.492
+deploy_risk_weighted_acv,100,23,0.4643,0.0412,11.282
+rule_score,100,26,0.245,0.0412,5.952
+rule_risk_weighted_acv,100,6,0.2336,0.0412,5.676
+commercial_baseline,100,2,0.0536,0.0412,1.302

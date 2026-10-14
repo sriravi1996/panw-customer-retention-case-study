@@ -1,0 +1,7 @@
+experiment,block,features_removed,method,baseline_ap,ablated_ap,ap_drop
+full_context,block_deployment,"deployment_reach_30d, deployment_reach_30d_missing, onboarding_delay_days",retrain_hgb_without_block,0.3282,0.3346,-0.0064
+full_context,block_value,"workflow_success_30d, workflow_success_30d_missing, productive_use_delta_30d",retrain_hgb_without_block,0.3282,0.2436,0.0846
+full_context,block_telemetry,"avg_coverage_90d, coverage_trend_90d, obs_completeness_90d",retrain_hgb_without_block,0.3282,0.324,0.0042
+full_context,block_service,"unresolved_customer_impact_hours_90d, repeat_sla_breaches_90d, p1_tickets_90d, open_tickets_90d, avg_open_age_hrs_90d, avg_resolution_hrs_90d, avg_resolution_hrs_90d_missing",retrain_hgb_without_block,0.3282,0.3267,0.0015
+full_context,block_commercial,"quoted_unit_price_change_pct, dated_budget_concern, days_to_renewal, tenure_days",retrain_hgb_without_block,0.3282,0.324,0.0042
+full_context,block_relationship,"days_without_confirmed_owner, overdue_agreed_actions, days_since_last_interaction_missing, median_prior_renewal_delay_missing",retrain_hgb_without_block,0.3282,0.3272,0.001

@@ -1,0 +1,98 @@
+{
+  "run_timestamp": "2026-10-14T14:51:06.706788",
+  "scoring_date": "2026-10-01",
+  "runtime_seconds": 106.1,
+  "joins": [
+    {
+      "join": "order_items -> orders",
+      "left_rows": 59382,
+      "right_rows": 44518,
+      "right_duplicate_keys": 0,
+      "unmatched_left_rows": 0,
+      "match_rate_pct": 100.0
+    },
+    {
+      "join": "orders -> users",
+      "left_rows": 19220,
+      "right_rows": 43839,
+      "right_duplicate_keys": 0,
+      "unmatched_left_rows": 0,
+      "match_rate_pct": 100.0
+    },
+    {
+      "join": "order_items -> products",
+      "left_rows": 59382,
+      "right_rows": 20,
+      "right_duplicate_keys": 0,
+      "unmatched_left_rows": 0,
+      "match_rate_pct": 100.0
+    },
+    {
+      "dataset": "order_item_fact",
+      "rows_before_join": 59382,
+      "rows_after_join": 59382,
+      "note": "One row per order item; no fanout expected"
+    },
+    {
+      "dataset": "deployment_week_features",
+      "source_tables": [
+        "telemetry_weekly",
+        "deployments",
+        "deployment_team_map"
+      ],
+      "as_of_date": "2026-10-01",
+      "point_in_time_filter": "available_at <= scoring_date (Bug #4 fix)",
+      "lookback_days": 180,
+      "rows": 293648,
+      "note": "One row per deployment \u00d7 week; missing telemetry preserved as null, not zero"
+    },
+    {
+      "dataset": "renewal_unit_features",
+      "source_tables": [
+        "order_items",
+        "orders",
+        "companies",
+        "products",
+        "support_tickets",
+        "contract_events",
+        "telemetry_weekly",
+        "renewal_quotes",
+        "account_interactions"
+      ],
+      "scoring_dates": [
+        "2023-10-01",
+        "2024-10-01",
+        "2025-04-01",
+        "2025-07-01",
+        "2025-10-01",
+        "2026-04-01",
+        "2026-10-01"
+      ],
+      "label_join": "expiring_contract_id (Bug#1 fix)",
+      "rows_total": 13901,
+      "labeled_rows": 11575,
+      "incomplete_history": {
+        "all_dates": 266,
+        "labeled": 212,
+        "scoring": 54,
+        "note": "Rows where a predecessor contract was quarantined during cleaning. Filter incomplete_history == False for analyses requiring complete renewal chain. Do NOT use as a model feature \u2014 this is a cleaning artifact, not a behavioral signal."
+      },
+      "note": "One row per recurring contract \u00d7 scoring date; label via expiring_contract_id"
+    },
+    {
+      "dataset": "company_summary",
+      "source_tables": [
+        "companies",
+        "orders",
+        "order_items",
+        "products",
+        "support_tickets",
+        "deployments",
+        "contract_events"
+      ],
+      "as_of_date": "2026-10-01",
+      "rows": 10000,
+      "note": "One row per company; GRR/NRR computed trailing 12m; recurring value NOT double-counted across teams"
+    }
+  ]
+}

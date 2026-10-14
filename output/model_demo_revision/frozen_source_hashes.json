@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-14T14:48:55.694320+00:00",
+  "files": {
+    "src/generate_data.py": "d4ecdc83d4a97376f493247cd415d89b82bd3afcc667ce8b3ce9b3cf90a38331",
+    "config/simulation.yaml": "a3825ffb8808d93428d2b3126ac4aacf3fc93be0a67aa9bc0981e57437668cd3",
+    "part2/src/build_review_cohort.py": "1bcdd05c0b74c12b21d7252fd7fb1324d4581b172223f48a50d612fc6f9dfd10",
+    "part2/src/_rule_baseline.py": "2a809fa12a5f11761d224a29ea9b3ac90ba955a378536b1f1351a9e75a4fbb71",
+    "part2/src/train.py": "7996a6ed469bdd18f47a1d34b9be92d1642dfa559b70f89d1c22c703567d21f1",
+    "part2/src/_features.py": "f4b7dbf442bde66a1ad424dc44a8e33b41d97cf9478a6a6b76257d7b347bfe17",
+    "output/model_demo_revision/frozen_design.md": "d7c50b0141be2ef018a8275bfedca6e82499c09d6ff6acb9408c3d92182a145f",
+    "part2/src/_review_bootstrap.py": "c2d72f6d7c5abd283f828cea6f94b387351a957e4a684129e1e928edd045e286"
+  },
+  "note": "Pre-evaluation seed-independence correction; no new model results inspected.",
+  "metadata_note": "Before model fitting/evaluation, static legacy run ID and row-count prose were replaced with live metadata. No predictive logic or scenario coefficients changed.",
+  "bootstrap_optimization": {
+    "utc": "2026-10-14T14:58:36.464600+00:00",
+    "old_review_hash": "b704322d4a56b2efebab5ec843c0bcf097b99e0e3ac610cec468e235c9471ccf",
+    "reason": "Replace repeated dataframe copies with one row gather. Exact row/multiplicity equivalence tested on 50 repeated-parent samples. Same parent draws, ranking, model, coefficients and statistical method."
+  },
+  "tie_break_correction": "Post-evaluation independent audit found tie-order sensitivity in health-rule ranking at capacity 50. All policies now break ties by ascending contract ID, without consulting outcomes. Model, data, scenario coefficients and evaluation seeds unchanged. Every policy and seed is re-evaluated with this fixed convention."
+}

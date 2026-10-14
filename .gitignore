@@ -1,0 +1,17 @@
+# Local/generated bulk data is distributed as a release archive.
+data/raw/
+data/cleaned/
+output/model_demo_revision/replications/
+output/review/
+.chart-data-*/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.log
+*.lock

@@ -1,0 +1,18 @@
+{
+  "note": "Company recurrence across splits is legitimate for existing-customer renewal prediction. Performance on never-seen-in-train companies is a sensitivity check.",
+  "n_companies_total": 4693,
+  "n_companies_multi_split": 2520,
+  "pct_companies_multi_split": 0.537,
+  "train_final_test_overlap": {
+    "n_train_companies": 2895,
+    "n_final_test_companies": 2430,
+    "n_in_both": 1138,
+    "n_final_test_never_in_train": 1292,
+    "pct_final_test_never_in_train": 0.5317
+  },
+  "parent_overlap": {
+    "n_parents_total": 4329,
+    "n_parents_multi_split": 2441,
+    "pct_parents_multi_split": 0.5639
+  }
+}

@@ -1,0 +1,5 @@
+n_families_bucket,n_companies,mean_grr,mean_nrr,pct_with_cancellation,note
+0,2332,0.512,0.512,0.1947,association only — selection effects may explain differences
+1,3238,0.9771,0.9945,0.092,association only — selection effects may explain differences
+2-3,4061,0.9833,1.0032,0.1074,association only — selection effects may explain differences
+4+,369,0.9863,1.0032,0.0488,association only — selection effects may explain differences

@@ -1,0 +1,31 @@
+experiment,model_type,config,C,class_weight,train_ap,ms_ap,max_depth,max_leaf_nodes,min_samples_leaf,max_iter
+experience_led,lr,C=0.01 cw=None,0.01,None,0.369655,0.277205,,,,
+experience_led,lr,C=0.01 cw=balanced,0.01,balanced,0.360195,0.290568,,,,
+experience_led,lr,C=0.1 cw=None,0.1,None,0.373906,0.284787,,,,
+experience_led,lr,C=0.1 cw=balanced,0.1,balanced,0.357768,0.292812,,,,
+experience_led,lr,C=1.0 cw=None,1.0,None,0.375096,0.285368,,,,
+experience_led,lr,C=1.0 cw=balanced,1.0,balanced,0.357177,0.292373,,,,
+experience_led,hgb,d=3 l=15 s=20 i=100 cw=None,,None,0.549548,0.295938,3.0,15.0,20.0,100.0
+experience_led,hgb,d=3 l=15 s=20 i=100 cw=balanced,,balanced,0.467056,0.300159,3.0,15.0,20.0,100.0
+experience_led,hgb,d=4 l=31 s=10 i=150 cw=None,,None,0.724189,0.26125,4.0,31.0,10.0,150.0
+experience_led,hgb,d=4 l=31 s=10 i=150 cw=balanced,,balanced,0.654561,0.227523,4.0,31.0,10.0,150.0
+size_value,lr,C=0.01 cw=None,0.01,None,0.095609,0.070123,,,,
+size_value,lr,C=0.01 cw=balanced,0.01,balanced,0.096918,0.066402,,,,
+size_value,lr,C=0.1 cw=None,0.1,None,0.099507,0.067253,,,,
+size_value,lr,C=0.1 cw=balanced,0.1,balanced,0.097338,0.065918,,,,
+size_value,lr,C=1.0 cw=None,1.0,None,0.099424,0.066848,,,,
+size_value,lr,C=1.0 cw=balanced,1.0,balanced,0.096861,0.065802,,,,
+size_value,hgb,d=3 l=15 s=20 i=100 cw=None,,None,0.259373,0.074503,3.0,15.0,20.0,100.0
+size_value,hgb,d=3 l=15 s=20 i=100 cw=balanced,,balanced,0.220033,0.070047,3.0,15.0,20.0,100.0
+size_value,hgb,d=4 l=31 s=10 i=150 cw=None,,None,0.563797,0.071899,4.0,31.0,10.0,150.0
+size_value,hgb,d=4 l=31 s=10 i=150 cw=balanced,,balanced,0.40029,0.067551,4.0,31.0,10.0,150.0
+full_context,lr,C=0.01 cw=None,0.01,None,0.413856,0.300716,,,,
+full_context,lr,C=0.01 cw=balanced,0.01,balanced,0.41245,0.315394,,,,
+full_context,lr,C=0.1 cw=None,0.1,None,0.435813,0.317499,,,,
+full_context,lr,C=0.1 cw=balanced,0.1,balanced,0.409112,0.305433,,,,
+full_context,lr,C=1.0 cw=None,1.0,None,0.44062,0.306382,,,,
+full_context,lr,C=1.0 cw=balanced,1.0,balanced,0.403875,0.298965,,,,
+full_context,hgb,d=3 l=15 s=20 i=100 cw=None,,None,0.60641,0.32819,3.0,15.0,20.0,100.0
+full_context,hgb,d=3 l=15 s=20 i=100 cw=balanced,,balanced,0.551627,0.310324,3.0,15.0,20.0,100.0
+full_context,hgb,d=4 l=31 s=10 i=150 cw=None,,None,0.820483,0.305157,4.0,31.0,10.0,150.0
+full_context,hgb,d=4 l=31 s=10 i=150 cw=balanced,,balanced,0.73435,0.286675,4.0,31.0,10.0,150.0

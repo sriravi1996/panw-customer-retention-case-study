@@ -1,0 +1,6 @@
+split,n_rows,n_positives,n_negatives,n_labeled,prevalence,total_acv
+train,4762,286,4476,4762,0.0601,376079033.29
+model_selection,2242,116,2126,2242,0.0517,165665314.86
+calibration,2665,120,2545,2665,0.045,198674327.3
+final_test,3139,141,2998,3139,0.0449,209366183.23
+scoring,3223,0,0,0,,233685007.3

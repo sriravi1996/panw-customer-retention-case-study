@@ -1,0 +1,49 @@
+{
+  "model_artifact": "full_context_hgb_refitted.pkl",
+  "model_experiment": "full_context",
+  "model_type": "hgb",
+  "model_fitting_complete": "2024-10-01",
+  "fitting_data": {
+    "splits": [
+      "train",
+      "model_selection"
+    ],
+    "max_label_available_at": "2024-09-30",
+    "note": "Train pred_dates <= 2023-04-04 (TF1-180d); labels available by TF1=2023-10-01. Model_selection pred_dates [TF1, 2024-04-04); labels available by TF2=2024-10-01. Refit complete at or before TF2=2024-10-01."
+  },
+  "portfolio_review_date": "2026-04-01",
+  "review_cohort_term_end_range": {
+    "min": "2026-04-02",
+    "max": "2026-06-30"
+  },
+  "review_cohort_pred_date_range": {
+    "min": "2026-01-02",
+    "max": "2026-04-01"
+  },
+  "score_age_days": {
+    "min": 0,
+    "max": 89,
+    "note": "days between original_prediction_date and portfolio_review_date D"
+  },
+  "follow_up_complete": {
+    "max_label_available_at": "2026-09-28",
+    "obs_end": "2026-10-01",
+    "complete": true
+  },
+  "model_predates_earliest_prediction": {
+    "model_fitting_complete": "2024-10-01",
+    "earliest_pred_date": "2026-01-02",
+    "valid": true
+  },
+  "prior_test_exposure_note": "The calendar cohort definition was inspected in the original project. This population was regenerated after the declared scenario freeze. This cohort is drawn from the final_test split (pred_dates 2025-10-01 to 2026-04-04, per pred_date-based split assignment). Outcomes were examined during evaluate.py. Results are retrospective ranking demonstration evidence, not prospective out-of-sample evaluation. Outreach clearance pending.",
+  "capacity": {
+    "main": 30,
+    "sensitivity": [
+      25,
+      50,
+      100
+    ],
+    "unit": "purchasing accounts (lead contract per account)"
+  },
+  "run_timestamp": "2026-10-14T08:02:05"
+}

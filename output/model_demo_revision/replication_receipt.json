@@ -1,0 +1,14 @@
+{
+  "primary_model": "part2/models/full_context_hgb_refitted.pkl",
+  "model_sha256": "01d7552c5b638484d0ebb7cb99bd28d67a70a4a542cbdf23d41dca43e40fe2f5",
+  "feature_count": 45,
+  "seed_order": [
+    137,
+    991,
+    2027
+  ],
+  "refitted_on_replication": false,
+  "primary_policy_metrics_reproduced": 16,
+  "source_freeze_verified": true,
+  "claim_scope": "Recovery of assumed synthetic mechanisms, not PANW validation"
+}

@@ -1,0 +1,52 @@
+{
+  "run_id": "025c13a1-7008-4dd2-9ab6-a2758790478c",
+  "config_hash": "6f1700455254634a",
+  "seed": 137,
+  "dev_mode": false,
+  "company_count": 10000,
+  "observation_start": "2021-10-01",
+  "observation_end": "2026-10-01",
+  "run_timestamp": "2026-10-14T14:46:46.975635",
+  "tables": {
+    "products": 20,
+    "parent_orgs": 9125,
+    "customer_accounts": 10000,
+    "teams": 21500,
+    "users": 43839,
+    "orders_canonical": 44957,
+    "order_items_canonical": 59966,
+    "customer_experience_state": 34957,
+    "orders": 45631,
+    "order_items": 59966,
+    "deployments_prelim": 13400,
+    "deployments": 13400,
+    "telemetry_weekly": 2532560,
+    "support_tickets": 282885,
+    "contract_events": 54509,
+    "account_interactions": 105285,
+    "renewal_quotes": 23588
+  },
+  "outcome_check": {
+    "total_cancellation_events": 1774,
+    "labeled_churn_events": 1695,
+    "note": "Should be > 0; if 0, label-join bug not fixed"
+  },
+  "runtime_seconds": 137.8,
+  "file_hashes": {
+    "account_interactions.csv": "f58f9b328660b0fa8ac58054c2cc36916f96fb7aba94a4228051a2955a39c59a",
+    "companies.csv": "3bb57540638a2337126dac189538177d2f94ec111374405d9b2f6b3dce56555c",
+    "contract_events.csv": "cd342fab164e101f84da6b39d5ba7ee11b859fbb419b5fe19e06b96b3e181a3c",
+    "deployment_team_map.csv": "1d31b19946f062b04c1083f3de4c565934d9a5e74aa61760b27dfeae677d3afb",
+    "deployments.csv": "7237ec04b441aa6d122010dfb1b25d74d4dcd7e79a036ed6536fb2dd263c48ac",
+    "entitlement_deployment_map.csv": "4f7c778c98b53109c001776e40c8e36fe4eee1b5c3c9a76ea4fad8a6cc0ca1c8",
+    "order_items.csv": "e8ff78861c773bbe0ebc341cb09b411c6739438a7269bcb6fb27eb238478816d",
+    "orders.csv": "c6cc3df9433622a3ecbd01bdd0332001e95ec59eee5b04df40f2e6ba18ee4991",
+    "parent_orgs.csv": "0a5b0660013c881c6017407501acc83c90c5a9731768d0a79605238217245c1a",
+    "products.csv": "f1ce8e7546c91d4f6f8da12346df1ced83636cfcfe7bbfb90ee5aa6da3023517",
+    "renewal_quotes.csv": "ae37b42dc4d7f16fe089dbbe2428ba0b64845f87b6988ece7352dedb2b9b75c8",
+    "support_tickets.csv": "290d6b6053a0d0647a8f3e86263eb0f513d4e29e7b648ffdba64b46a8e6f6a24",
+    "teams.csv": "334e783e64967303e5bb5107ff2cbf39f2dd927d8c008f790f3e2b6a65329e04",
+    "telemetry_weekly.csv": "877347c36fbc346ae9cf01ce91e10f7864b1cc146748908b4ff16f3649baa133",
+    "users.csv": "485680e9b5546bded87d6abbc1075db0a409a6d30364db7e6f8d4d5bb07c26fb"
+  }
+}

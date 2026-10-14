@@ -1,0 +1,4 @@
+{
+  "days_since_last_interaction_median": 69.0,
+  "note": "Fitted on training split only (2023-10-01 + 2024-10-01). Load from this file in evaluate.py and prioritize.py. Do not refit outside training."
+}

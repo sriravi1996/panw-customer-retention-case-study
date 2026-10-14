@@ -1,0 +1,229 @@
+# Simulation configuration — Part 1 (corrected v2)
+# All parameters documented in docs/simulation_assumptions.md
+# Correction plan: Part_1_Corrections_and_Engagement_Plan.pdf
+
+seed: 137
+
+# ── Time window (5-year observation) ─────────────────────────────────────────
+observation_start:    "2021-10-01"
+observation_end:      "2026-10-01"
+scoring_date:         "2026-10-01"
+# Historical evaluation snapshots with complete 90-day forward windows
+historical_scoring_dates:
+  - "2023-10-01"   # training cohort A: 2yr lookback; labels mature 2023-12-30
+  - "2024-10-01"   # training cohort B: 3yr lookback; labels mature 2024-12-30
+  - "2025-04-01"   # model/threshold selection: expiry ≤2025-06-30; labels mature 2025-09-28
+  - "2025-07-01"   # additional training; labels mature 2025-09-29
+  - "2025-10-01"   # calibration cohort: expiry ≤2025-12-31; labels mature 2026-03-31
+  - "2026-04-01"   # FINAL TEST (sealed): expiry ≤2026-06-30; labels mature 2026-09-28
+  # 2026-07-01 intentionally omitted: only 14 rows matured, all negative — invalid test set
+label_window_days: 90
+outcome_window_days: 90
+renewal_grace_period_days: 30
+# Opening installed base: customers whose first purchase predates observation_start
+opening_base_start: "2018-10-01"   # up to 3yr pre-history for established customers
+
+# ── Scale (conservative scenario) ─────────────────────────────────────────────
+company_count: 10000          # mid-scale run
+# company_count: 70000        # full-scale conservative baseline
+# company_count: 2000         # dev mode (uncomment to use)
+dev_mode: false
+
+# Parent org hierarchy: some parents have multiple purchasing accounts
+parent_org_share_multi_account: 0.15   # 15% of parents have 2-4 accounts
+avg_accounts_per_multi_parent: 2.4
+
+avg_users_per_account: 3.0            # ~210k contacts total
+avg_teams_per_account: 1.5            # ~105k teams total; enterprise tail allowed
+history_months: 60                    # 5 years
+
+# ── Company size mix ──────────────────────────────────────────────────────────
+size_segments:
+  smb:
+    share: 0.45
+    emp_min: 50
+    emp_max: 499
+    arr_min: 5000
+    arr_max: 50000
+    budget_median: 10000
+    budget_p90: 40000
+  midmarket:
+    share: 0.35
+    emp_min: 500
+    emp_max: 4999
+    arr_min: 50000
+    arr_max: 500000
+    budget_median: 60000
+    budget_p90: 250000
+  enterprise:
+    share: 0.18
+    emp_min: 5000
+    emp_max: 49999
+    arr_min: 500000
+    arr_max: 5000000
+    budget_median: 250000
+    budget_p90: 1000000
+  large_enterprise:
+    share: 0.02
+    emp_min: 50000
+    emp_max: 500000
+    arr_min: 5000000
+    arr_max: 30000000
+    budget_median: 1000000
+    budget_p90: 3000000
+
+# ── Product catalog ───────────────────────────────────────────────────────────
+# financial_unit: what unit_price is expressed per (yr = per unit per year)
+# launch_date: first date product can be synthesized (no sales before this)
+products:
+  - {id: "PA-SMB",      name: "PA-Series NGFW SMB",              family: "Strata",   type: "hardware",     unit: "device",       annual_price: 8000,   recurring: false, launch_date: "2018-01-01"}
+  - {id: "PA-ENT",      name: "PA-Series NGFW Enterprise",       family: "Strata",   type: "hardware",     unit: "device",       annual_price: 45000,  recurring: false, launch_date: "2018-01-01"}
+  - {id: "VM-SERIES",   name: "VM-Series vNGFW",                 family: "Strata",   type: "subscription", unit: "vcpu",         annual_price: 1200,   recurring: true,  launch_date: "2018-01-01"}
+  - {id: "CN-SERIES",   name: "CN-Series Container NGFW",        family: "Strata",   type: "subscription", unit: "credit",       annual_price: 500,    recurring: true,  launch_date: "2020-01-01"}
+  - {id: "PA-ACCESS-U", name: "Prisma Access Mobile Users",      family: "SASE",     type: "subscription", unit: "user",         annual_price: 120,    recurring: true,  launch_date: "2019-01-01"}
+  - {id: "PA-ACCESS-N", name: "Prisma Access Remote Networks",   family: "SASE",     type: "subscription", unit: "mbps",         annual_price: 120,    recurring: true,  launch_date: "2019-01-01"}  # Synthetic tariff revised to budget-consistent scale; not PANW published pricing
+  - {id: "GP",          name: "GlobalProtect",                   family: "SASE",     type: "subscription", unit: "user",         annual_price: 60,     recurring: true,  launch_date: "2018-01-01"}
+  - {id: "PC-CSPM",     name: "Prisma Cloud CSPM",               family: "Prisma",   type: "subscription", unit: "cloud_account",annual_price: 2400,   recurring: true,  launch_date: "2019-06-01"}
+  - {id: "PC-CWP",      name: "Prisma Cloud CWP",                family: "Prisma",   type: "subscription", unit: "workload",     annual_price: 1800,   recurring: true,  launch_date: "2019-06-01"}
+  - {id: "PC-DSPM",     name: "Prisma Cloud DSPM",               family: "Prisma",   type: "subscription", unit: "tb",           annual_price: 3000,   recurring: true,  launch_date: "2022-01-01"}
+  - {id: "PC-APPSEC",   name: "Prisma Cloud AppSec",             family: "Prisma",   type: "subscription", unit: "app",          annual_price: 5000,   recurring: true,  launch_date: "2021-01-01"}
+  - {id: "CC",          name: "Cortex Cloud",                    family: "Prisma",   type: "subscription", unit: "credit",       annual_price: 600,    recurring: true,  launch_date: "2025-02-13"}
+  - {id: "XDR",         name: "Cortex XDR",                      family: "Cortex",   type: "subscription", unit: "endpoint",     annual_price: 50,     recurring: true,  launch_date: "2019-01-01"}
+  - {id: "XSOAR",       name: "Cortex XSOAR",                    family: "Cortex",   type: "subscription", unit: "operator_seat",annual_price: 8000,   recurring: true,  launch_date: "2020-03-01"}
+  - {id: "XSIAM",       name: "Cortex XSIAM",                    family: "Cortex",   type: "subscription", unit: "tb_ingest",    annual_price: 15000,  recurring: true,  launch_date: "2022-06-01"}
+  - {id: "XPANSE",      name: "Cortex Xpanse",                   family: "Cortex",   type: "subscription", unit: "asset",        annual_price: 25,     recurring: true,  launch_date: "2021-01-01"}
+  - {id: "SUP-PREM",    name: "Premium Support",                 family: "Support",  type: "support",      unit: "pct_net_acv",  annual_price: 0.20,   recurring: true,  launch_date: "2018-01-01"}
+  - {id: "SUP-ENH",     name: "Enhanced Support",                family: "Support",  type: "support",      unit: "pct_net_acv",  annual_price: 0.12,   recurring: true,  launch_date: "2018-01-01"}
+  - {id: "PS-SMB",      name: "Professional Services SMB",       family: "Services", type: "services",     unit: "engagement",   annual_price: 25000,  recurring: false, launch_date: "2018-01-01"}
+  - {id: "PS-ENT",      name: "Professional Services Enterprise",family: "Services", type: "services",     unit: "engagement",   annual_price: 150000, recurring: false, launch_date: "2018-01-01"}
+
+# ── Product penetration (probability of purchasing at least once) ─────────────
+penetration:
+  Strata:   0.55
+  SASE:     0.22
+  Prisma:   0.18
+  Cortex:   0.20
+  Support:  0.40   # conditional on having a supported product
+  Services: 0.08
+
+# ── Term length mix (by size segment) ─────────────────────────────────────────
+term_mix:
+  smb:              {yr1: 0.70, yr2: 0.20, yr3: 0.10}
+  midmarket:        {yr1: 0.45, yr2: 0.35, yr3: 0.20}
+  enterprise:       {yr1: 0.25, yr2: 0.35, yr3: 0.40}
+  large_enterprise: {yr1: 0.15, yr2: 0.30, yr3: 0.55}
+
+# ── Subscription cancellation rates (annual, per subscription line) ───────────
+# These are subscription-level annual cancellation anchors, not logo churn.
+# Calibrated to PANW-like retention: ~120% NRR, 3-5% enterprise logo churn.
+# Archetype relative-risk multipliers (churn_risk_weights / pop-weighted avg)
+# shift each account's probability from this anchor; weighted avg stays at base.
+# Ref: PANW FY2025 120% NRR; enterprise security benchmark 4-8% annual churn.
+subscription_cancellation_rate:
+  smb:              0.08   # cybersec SMB (50-499 emp); sticky product but some switching
+  midmarket:        0.05   # 500-4999 emp; moderate; budget cycles drive some loss
+  enterprise:       0.025  # 5000-49999 emp; platform stickiness strong; ~2.5%/yr
+  large_enterprise: 0.01   # 50000+ emp; near-zero logo churn at PANW scale; ~1%/yr
+  # Weighted avg (45/35/18/2% mix): ~5.7% — consistent with PANW 120% NRR / ~95% GRR
+
+# ── Dirty data injection rates ────────────────────────────────────────────────
+dirty_data:
+  duplicate_order_rate:          0.015   # duplicates injected as exact field copies
+  inconsistent_product_id_rate:  0.020   # random-case product_id on items
+  missing_team_mapping_rate:     0.030   # null owner_team_id on items
+  invalid_date_rate:             0.010   # unparseable order_date strings
+  late_telemetry_rate:           0.000   # main scenario: reliable reporting; set >0 for stress tests
+  missing_telemetry_rate:        0.000   # main scenario: reliable reporting; set >0 for stress tests
+  missing_interactions_rate:     0.05    # 5% of interactions may have missing owner fields after handoff
+
+# ── Deployment scope expansion by billing unit ─────────────────────────────────
+# scope_targets = licensed_units × Uniform(1.0, expansion_max).
+# For infrastructure products the network/environment to protect is larger than
+# the licensed capacity, so coverage < 100% even at full utilization.
+# For seat/user products the scope equals the licensed count exactly (ratio = 1.0).
+# These are simulation design assumptions, not measured PANW deployment data.
+scope_expansion_by_billing_unit:
+  user:          1.0   # seat-based: scope equals licensed capacity
+  endpoint:      1.0   # endpoint count equals licensed
+  operator_seat: 1.0   # operator seats are the deployment unit
+  app:           1.0   # app count equals licensed
+  engagement:    1.0   # professional services engagements
+  pct_net_acv:   1.0   # support products (ACV-based, not unit-count)
+  device:        1.5   # network has more devices than licensed firewalls
+  vcpu:          1.5   # virtualized environment larger than licensed capacity
+  credit:        1.3   # credit-based consumption; budget > immediate spend
+  mbps:          1.4   # available bandwidth may exceed licensed throughput
+  cloud_account: 1.3   # cloud accounts can exceed monitored scope
+  workload:      1.5   # more workloads exist than are protected
+  tb:            1.4   # data volume can exceed licensed DSPM capacity
+  tb_ingest:     1.3   # log volume can exceed licensed SIEM capacity
+  asset:         1.6   # attack surface larger than what is monitored
+
+# ── Deployment behavioral archetype mix ───────────────────────────────────────
+# sensor_outage removed from main archetype list; its 0.05 weight moved to healthy_steady.
+deployment_archetypes:
+  healthy_steady:       0.43
+  delayed_onboarding:   0.12
+  gradual_abandonment:  0.10
+  workload_growth:      0.08
+  workload_shrinkage:   0.06
+  seasonal:             0.05
+  failed_deployment:    0.04
+  platform_migration:   0.04
+  champion_turnover:    0.04
+  budget_pressure:      0.04
+
+# Customer experience state parameters (forward simulation)
+# These drive renewal probability via logistic function
+experience_weights:
+  deployment_gap_weight:    0.35  # incomplete deployment reach increases risk
+  value_decline_weight:     0.30  # declining productive use increases risk
+  service_problem_weight:   0.25  # unresolved customer impact increases risk
+  commercial_pressure_weight: 0.10  # price shock / budget concern increases risk
+
+# Renewal quote timing
+quote_lead_days: 120  # quotes issued ~120 days before term_end
+quote_update_window_days: 30  # quotes may be updated within 30 days of issuance
+
+# ── Commercial decision weights (drawn after operational signals) ─────────────
+# These are simulation assumptions, not calibrated PANW coefficients
+churn_risk_weights:
+  gradual_abandonment:  0.65   # archetype → elevated churn probability (strengthened for signal clarity)
+  failed_deployment:    0.75
+  budget_pressure:      0.45
+  champion_turnover:    0.30
+  healthy_steady:       0.03
+  delayed_onboarding:   0.12
+  workload_growth:      0.03
+  workload_shrinkage:   0.15
+  seasonal:             0.06
+  platform_migration:   0.08
+
+# ── Telemetry / deployments ───────────────────────────────────────────────────
+# avg_active_deployments: 100,000 planning assumption (conservative)
+# Weekly obs: ~100k deps × ~260 weeks = ~26M rows; real output follows lifetimes
+telemetry_batch_size: 5000
+
+# ── Dev-mode overrides ────────────────────────────────────────────────────────
+dev_overrides:
+  company_count: 2000
+
+# ── Expected output files (consumed by downstream pipeline stages) ─────────────
+# generate_data.py hashes these files; ingest_clean.py verifies the hashes.
+# Expected: products.csv, parent_orgs.csv, companies.csv, teams.csv, users.csv,
+#           orders.csv, order_items.csv, deployments.csv, telemetry_weekly.csv,
+#           support_tickets.csv, contract_events.csv, entitlement_deployment_map.csv,
+#           deployment_team_map.csv, account_interactions.csv, renewal_quotes.csv
+# Note: deployments_prelim.csv is intermediate only and NOT in the hash manifest.
+
+# Separate, disclosed model-demonstration scenario. See frozen_design.md.
+# These coefficients are assumptions, not estimates of PANW customer behavior.
+experience_scenario:
+  enabled: true
+  version: "interaction_demo_v1"
+  reference_population: 20000
+  shared_coverage_weight: 0.75
+  deployment_value_failure: 3.2
+  deterioration_with_incomplete_reach: 2.2
+  commercial_value_conflict: 1.2
+  service_with_deployment_problem: 0.8

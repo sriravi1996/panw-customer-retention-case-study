@@ -1,0 +1,806 @@
+{
+  "_meta": {
+    "description": "Presentation data bundle — all deck numbers sourced from here.",
+    "generated_by": "part3/build_model_demo_bundle.py",
+    "source_files": [
+      "part2/outputs/metrics.json",
+      "part2/outputs/model_selection_record.json",
+      "part2/outputs/split_manifest.json",
+      "part2/outputs/timing_audit.json",
+      "part2/outputs/boundary_purged.csv",
+      "part2/outputs/feature_importance.csv",
+      "part2/outputs/renewal_review_policy_comparison.csv",
+      "part2/outputs/cohort_eligibility_waterfall.csv",
+      "part2/outputs/renewal_review_contracts.csv",
+      "part2/outputs/arr_bridge.csv",
+      "part2/outputs/analyze_growth_summary.json",
+      "outputs/quality_report.json",
+      "outputs/eda_summary.json",
+      "outputs/eda_top20_ordered_items.csv",
+      "outputs/generation_manifest.json",
+      "config/simulation.yaml",
+      "part2/outputs/renewal_review_policy_diffs.csv",
+      "part2/outputs/renewal_review_accounts.csv",
+      "output/model_demo_revision/all_seed_policy_results.csv",
+      "output/model_demo_revision/all_seed_test_metrics.csv"
+    ],
+    "source_sha256": {
+      "part2/outputs/metrics.json": "36add983812455f5fb6fdc9d25d7f438f75f83eee36bdcd8d1bd664e8eb328f3",
+      "part2/outputs/model_selection_record.json": "a143e6c1682b14a8b8c6060daa022f418bc1742719e842c96daee9366c8706af",
+      "part2/outputs/split_manifest.json": "0bb85692460c3392124d4d595c6139377ad87a9c9e8f243729a72d220a87d04f",
+      "part2/outputs/timing_audit.json": "ebcde2ee2215f1d5fe44da35084272af657663058e7d73e416fb86af6d2eb276",
+      "part2/outputs/boundary_purged.csv": "2a68e9b6a835293a0bc634a0d5be5a0e7351c0d7a7619eec1f05139f3f6b52f0",
+      "part2/outputs/feature_importance.csv": "b78603fe49837747b59ea329a398fe8cc4d7762e7c902969b93bd4455efcf6da",
+      "part2/outputs/renewal_review_policy_comparison.csv": "a641775b7cfd7125e619b05ba1b103ecab9fed906a302511210bd380eb8f011a",
+      "part2/outputs/cohort_eligibility_waterfall.csv": "1de3d5f0a4f3b961ee5eea31a9d0b464a2e48c4765bfbc39b963d2d2e205356b",
+      "part2/outputs/renewal_review_contracts.csv": "e2043740c16a35cc6a052533531f63eca0a1aaed5249864e7df4dde075e6879d",
+      "part2/outputs/arr_bridge.csv": "726700509dedb86c9552196747465202951b1a45a10dc2bb67679e20630c3178",
+      "part2/outputs/analyze_growth_summary.json": "c9bb9ee79f90a935645794f87d854dc9287688ac5e7e1478d60972a2af1043c3",
+      "outputs/quality_report.json": "5121b091410f533aa76492f68c1b73879dea80101dcabd98ad9d0a315a16bc37",
+      "outputs/eda_summary.json": "12ff78e92c51fa93d524e80e371eb7df3b022ad326fd536bbf3eceaaf954513d",
+      "outputs/eda_top20_ordered_items.csv": "f0c45c447522ec416eb66ba56e5ed7b671957270096b21f55648ff9902eb6280",
+      "outputs/generation_manifest.json": "9ffb5880279baa4e82b26df6c82cf119c638802d90f29bbf76bf2109f7898e6b",
+      "config/simulation.yaml": "a3825ffb8808d93428d2b3126ac4aacf3fc93be0a67aa9bc0981e57437668cd3",
+      "part2/outputs/renewal_review_policy_diffs.csv": "b5272daabcc995140931412cfcc72d5b299475144400598a90bbc5bae69d5070",
+      "part2/outputs/renewal_review_accounts.csv": "e2730b7323b45bad34f9f5841c8f9a9948e82771aae552e382c4f9428e9a67e6",
+      "output/model_demo_revision/all_seed_policy_results.csv": "4a6ce100110edf58edb6e67b2a085ce1b51f0d32579f4bdeb4e629efa204fba7",
+      "output/model_demo_revision/all_seed_test_metrics.csv": "524b2b7f10e097f43fce4558cd93dcbdbccac98fae7fa065544ff8854e5c3970"
+    },
+    "run_id": "025c13a1-7008-4dd2-9ab6-a2758790478c",
+    "scope": "Recovery of declared synthetic mechanisms, not real PANW validation"
+  },
+  "extra": {
+    "retained_labeled": 12808,
+    "positives": 663,
+    "segments": [
+      {
+        "size_segment": "enterprise",
+        "n": 2045,
+        "positives": 43.0,
+        "rate": 0.021026894865525673
+      },
+      {
+        "size_segment": "large_enterprise",
+        "n": 201,
+        "positives": 1.0,
+        "rate": 0.004975124378109453
+      },
+      {
+        "size_segment": "midmarket",
+        "n": 4292,
+        "positives": 194.0,
+        "rate": 0.045200372786579686
+      },
+      {
+        "size_segment": "smb",
+        "n": 6270,
+        "positives": 425.0,
+        "rate": 0.06778309409888357
+      }
+    ],
+    "model_minus_rule_90ci_pp": [
+      16.669999999999998,
+      53.33
+    ]
+  },
+  "replications": [
+    {
+      "seed": 137,
+      "policy": "health_rules",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 3,
+      "precision_lead_churned": 0.1,
+      "recall_churned_accounts": 0.0434782608695652,
+      "cancelled_lead_acv": 251183.58,
+      "pct_cancelled_acv_of_pool": 0.0797858050706888
+    },
+    {
+      "seed": 137,
+      "policy": "commercial_value",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 0,
+      "precision_lead_churned": 0.0,
+      "recall_churned_accounts": 0.0,
+      "cancelled_lead_acv": 0.0,
+      "pct_cancelled_acv_of_pool": 0.0
+    },
+    {
+      "seed": 137,
+      "policy": "model_score",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 13,
+      "precision_lead_churned": 0.4333333333333333,
+      "recall_churned_accounts": 0.1884057971014492,
+      "cancelled_lead_acv": 230143.28,
+      "pct_cancelled_acv_of_pool": 0.0731025765155866
+    },
+    {
+      "seed": 137,
+      "policy": "model_x_acv",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 11,
+      "precision_lead_churned": 0.3666666666666666,
+      "recall_churned_accounts": 0.1594202898550724,
+      "cancelled_lead_acv": 1074677.86,
+      "pct_cancelled_acv_of_pool": 0.341360045317234
+    },
+    {
+      "seed": 991,
+      "policy": "health_rules",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 8,
+      "precision_lead_churned": 0.2666666666666666,
+      "recall_churned_accounts": 0.1212121212121212,
+      "cancelled_lead_acv": 121449.84,
+      "pct_cancelled_acv_of_pool": 0.0868763460262882
+    },
+    {
+      "seed": 991,
+      "policy": "commercial_value",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 0,
+      "precision_lead_churned": 0.0,
+      "recall_churned_accounts": 0.0,
+      "cancelled_lead_acv": 0.0,
+      "pct_cancelled_acv_of_pool": 0.0
+    },
+    {
+      "seed": 991,
+      "policy": "model_score",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 16,
+      "precision_lead_churned": 0.5333333333333333,
+      "recall_churned_accounts": 0.2424242424242424,
+      "cancelled_lead_acv": 191859.44,
+      "pct_cancelled_acv_of_pool": 0.1372422318370273
+    },
+    {
+      "seed": 991,
+      "policy": "model_x_acv",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 3,
+      "precision_lead_churned": 0.1,
+      "recall_churned_accounts": 0.0454545454545454,
+      "cancelled_lead_acv": 255020.67,
+      "pct_cancelled_acv_of_pool": 0.1824231630998926
+    },
+    {
+      "seed": 2027,
+      "policy": "health_rules",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 7,
+      "precision_lead_churned": 0.2333333333333333,
+      "recall_churned_accounts": 0.1272727272727272,
+      "cancelled_lead_acv": 4088860.86,
+      "pct_cancelled_acv_of_pool": 0.7614831090855324
+    },
+    {
+      "seed": 2027,
+      "policy": "commercial_value",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 2,
+      "precision_lead_churned": 0.0666666666666666,
+      "recall_churned_accounts": 0.0363636363636363,
+      "cancelled_lead_acv": 4034646.85,
+      "pct_cancelled_acv_of_pool": 0.7513866410705278
+    },
+    {
+      "seed": 2027,
+      "policy": "model_score",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 9,
+      "precision_lead_churned": 0.3,
+      "recall_churned_accounts": 0.1636363636363636,
+      "cancelled_lead_acv": 156037.31000000003,
+      "pct_cancelled_acv_of_pool": 0.0290593835350374
+    },
+    {
+      "seed": 2027,
+      "policy": "model_x_acv",
+      "capacity": 30,
+      "n_accounts_reviewed": 30,
+      "n_lead_churned": 4,
+      "precision_lead_churned": 0.1333333333333333,
+      "recall_churned_accounts": 0.0727272727272727,
+      "cancelled_lead_acv": 4118840.67,
+      "pct_cancelled_acv_of_pool": 0.767066355791705
+    }
+  ],
+  "all_seed_tests": [
+    {
+      "seed": 137,
+      "policy": "model_score",
+      "n": 3139,
+      "positives": 141,
+      "prevalence": 0.0449187639375597,
+      "ap": 0.2464444653175621,
+      "roc_auc": 0.7917334960895916
+    },
+    {
+      "seed": 137,
+      "policy": "health_rules",
+      "n": 3139,
+      "positives": 141,
+      "prevalence": 0.0449187639375597,
+      "ap": 0.1315407992978821,
+      "roc_auc": 0.7626419977384451
+    },
+    {
+      "seed": 991,
+      "policy": "model_score",
+      "n": 3013,
+      "positives": 136,
+      "prevalence": 0.0451377364752738,
+      "ap": 0.2170456824409026,
+      "roc_auc": 0.7565759880594574
+    },
+    {
+      "seed": 991,
+      "policy": "health_rules",
+      "n": 3013,
+      "positives": 136,
+      "prevalence": 0.0451377364752738,
+      "ap": 0.1256404188062346,
+      "roc_auc": 0.7087959271299762
+    },
+    {
+      "seed": 2027,
+      "policy": "model_score",
+      "n": 3185,
+      "positives": 125,
+      "prevalence": 0.0392464678178963,
+      "ap": 0.2278781807561289,
+      "roc_auc": 0.8258104575163399
+    },
+    {
+      "seed": 2027,
+      "policy": "health_rules",
+      "n": 3185,
+      "positives": 125,
+      "prevalence": 0.0392464678178963,
+      "ap": 0.1416892119311443,
+      "roc_auc": 0.7569830065359476
+    }
+  ],
+  "model_parameters": "d=3 l=15 s=20 i=100 cw=None",
+  "data_quality": {
+    "n_orders_raw": 45631,
+    "n_orders_clean": 44518,
+    "n_order_items_raw": 59966,
+    "n_order_items_clean": 59382,
+    "n_deployments": 13400,
+    "n_support_tickets": 282885,
+    "n_weekly_obs": 2532560,
+    "n_part1_checks": 35,
+    "n_accounts": 10000,
+    "n_parent_orgs": 9125,
+    "n_duplicate_orders_removed": 674,
+    "n_invalid_date_quarantined": 439
+  },
+  "eda": {
+    "top5_products": [
+      {
+        "name": "Enhanced Support",
+        "orders": 12713,
+        "companies": 4758
+      },
+      {
+        "name": "CN-Series Container NGFW",
+        "orders": 7560,
+        "companies": 3067
+      },
+      {
+        "name": "VM-Series vNGFW",
+        "orders": 5949,
+        "companies": 2074
+      },
+      {
+        "name": "Premium Support",
+        "orders": 3764,
+        "companies": 1384
+      },
+      {
+        "name": "Cortex XDR",
+        "orders": 3379,
+        "companies": 1077
+      }
+    ],
+    "top20_products": [
+      {
+        "rank": 1,
+        "product": "Enhanced Support",
+        "family": "Support",
+        "type": "support",
+        "orders": 12713,
+        "companies": 4758
+      },
+      {
+        "rank": 2,
+        "product": "CN-Series Container NGFW",
+        "family": "Strata",
+        "type": "subscription",
+        "orders": 7560,
+        "companies": 3067
+      },
+      {
+        "rank": 3,
+        "product": "VM-Series vNGFW",
+        "family": "Strata",
+        "type": "subscription",
+        "orders": 5949,
+        "companies": 2074
+      },
+      {
+        "rank": 4,
+        "product": "Premium Support",
+        "family": "Support",
+        "type": "support",
+        "orders": 3764,
+        "companies": 1384
+      },
+      {
+        "rank": 5,
+        "product": "Cortex XDR",
+        "family": "Cortex",
+        "type": "subscription",
+        "orders": 3379,
+        "companies": 1077
+      },
+      {
+        "rank": 6,
+        "product": "GlobalProtect",
+        "family": "SASE",
+        "type": "subscription",
+        "orders": 3105,
+        "companies": 1095
+      },
+      {
+        "rank": 7,
+        "product": "Prisma Access Mobile Users",
+        "family": "SASE",
+        "type": "subscription",
+        "orders": 2878,
+        "companies": 1046
+      },
+      {
+        "rank": 8,
+        "product": "Prisma Access Remote Networks",
+        "family": "SASE",
+        "type": "subscription",
+        "orders": 2786,
+        "companies": 982
+      },
+      {
+        "rank": 9,
+        "product": "PA-Series NGFW Enterprise",
+        "family": "Strata",
+        "type": "hardware",
+        "orders": 2428,
+        "companies": 2428
+      },
+      {
+        "rank": 10,
+        "product": "Prisma Cloud CSPM",
+        "family": "Prisma",
+        "type": "subscription",
+        "orders": 2279,
+        "companies": 772
+      },
+      {
+        "rank": 11,
+        "product": "Prisma Cloud CWP",
+        "family": "Prisma",
+        "type": "subscription",
+        "orders": 2238,
+        "companies": 746
+      },
+      {
+        "rank": 12,
+        "product": "PA-Series NGFW SMB",
+        "family": "Strata",
+        "type": "hardware",
+        "orders": 1954,
+        "companies": 1954
+      },
+      {
+        "rank": 13,
+        "product": "Cortex XSOAR",
+        "family": "Cortex",
+        "type": "subscription",
+        "orders": 1882,
+        "companies": 724
+      },
+      {
+        "rank": 14,
+        "product": "Cortex Xpanse",
+        "family": "Cortex",
+        "type": "subscription",
+        "orders": 1162,
+        "companies": 505
+      },
+      {
+        "rank": 15,
+        "product": "Prisma Cloud AppSec",
+        "family": "Prisma",
+        "type": "subscription",
+        "orders": 1019,
+        "companies": 432
+      },
+      {
+        "rank": 16,
+        "product": "Prisma Cloud DSPM",
+        "family": "Prisma",
+        "type": "subscription",
+        "orders": 702,
+        "companies": 361
+      },
+      {
+        "rank": 17,
+        "product": "Cortex XSIAM",
+        "family": "Cortex",
+        "type": "subscription",
+        "orders": 675,
+        "companies": 373
+      },
+      {
+        "rank": 18,
+        "product": "Professional Services SMB",
+        "family": "Services",
+        "type": "services",
+        "orders": 517,
+        "companies": 517
+      },
+      {
+        "rank": 19,
+        "product": "Professional Services Enterprise",
+        "family": "Services",
+        "type": "services",
+        "orders": 508,
+        "companies": 508
+      },
+      {
+        "rank": 20,
+        "product": "Cortex Cloud",
+        "family": "Prisma",
+        "type": "subscription",
+        "orders": 126,
+        "companies": 107
+      }
+    ],
+    "highest_aov": {
+      "company": "Richardson, Wood and Durham",
+      "aov_m": 20.07,
+      "order_count": 1,
+      "top_product": "Prisma Cloud CWP"
+    },
+    "repeat_buyer": {
+      "company": "Williams, Hull and Chan",
+      "aov_m": 11.08,
+      "orders": 3
+    },
+    "leading_sales_product": "Prisma Cloud CWP",
+    "n_enhanced_support_orders": 12563
+  },
+  "splits": {
+    "train": {
+      "n": 4762,
+      "pos": 286
+    },
+    "ms": {
+      "n": 2242,
+      "pos": 116
+    },
+    "cal": {
+      "n": 2665,
+      "pos": 120
+    },
+    "final_test": {
+      "n": 3139,
+      "pos": 141
+    },
+    "scoring": {
+      "n": 3223,
+      "pos": 0
+    },
+    "boundary_purged": 7060,
+    "refit_n": 7004,
+    "refit_pos": 402
+  },
+  "selection": {
+    "experiment": "full_context",
+    "model_type": "hgb",
+    "artifact": "full_context_hgb_refitted.pkl",
+    "ms_ap": 0.3282,
+    "deployment_policy": "full_context_hgb",
+    "num_features": 41,
+    "cat_features": 4
+  },
+  "ms_aps": {
+    "prevalence": 0.0517,
+    "rule": 0.2112,
+    "lr": 0.3175,
+    "hgb": 0.3282
+  },
+  "ft_aps": {
+    "prevalence": 0.0449,
+    "rule": 0.1315,
+    "lr": 0.262,
+    "hgb": 0.2496,
+    "hgb_refitted": 0.2464,
+    "hgb_refitted_roc": 0.7917
+  },
+  "ft_prevalence": 4.49,
+  "unseen": {
+    "n_clean_train": 1519,
+    "n_clean_fit": 1079,
+    "n_overlap_train": 1168,
+    "n_overlap_fit": 1472,
+    "pos_clean_fit": 50,
+    "prev_clean_fit": 4.63,
+    "hgb_refitted_ap_unseen_fit": 0.3131
+  },
+  "top5_fi": [
+    {
+      "feature": "workflow_success_30d",
+      "plain": "Successful workflow operations (30d)",
+      "ap_drop": 0.1816
+    },
+    {
+      "feature": "avg_coverage_90d",
+      "plain": "Protected scope fraction (90d average)",
+      "ap_drop": 0.1724
+    },
+    {
+      "feature": "employee_count",
+      "plain": "Customer size",
+      "ap_drop": 0.0127
+    },
+    {
+      "feature": "productive_use_delta_30d",
+      "plain": "Change in workflow success (30d periods)",
+      "ap_drop": 0.0121
+    },
+    {
+      "feature": "deployment_reach_30d",
+      "plain": "Deployment scope reached (30d)",
+      "ap_drop": 0.0061
+    }
+  ],
+  "policies": {
+    "health_rules": {
+      "n_cancelled": 3,
+      "precision": 10.0,
+      "recall": 4.3,
+      "acv_pct": 8.0,
+      "prec_lo": 0.0,
+      "prec_hi": 23.3,
+      "acv_lo": 0.0,
+      "acv_hi": 17.7
+    },
+    "model_score": {
+      "n_cancelled": 13,
+      "precision": 43.3,
+      "recall": 18.8,
+      "acv_pct": 7.3,
+      "prec_lo": 30.0,
+      "prec_hi": 60.0,
+      "acv_lo": 3.8,
+      "acv_hi": 13.1
+    },
+    "model_x_acv": {
+      "n_cancelled": 11,
+      "precision": 36.7,
+      "recall": 15.9,
+      "acv_pct": 34.1,
+      "prec_lo": 20.0,
+      "prec_hi": 46.7,
+      "acv_lo": 17.2,
+      "acv_hi": 47.2
+    },
+    "commercial_value": {
+      "n_cancelled": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "acv_pct": 0.0,
+      "prec_lo": 0.0,
+      "prec_hi": 0.0,
+      "acv_lo": 0.0,
+      "acv_hi": 0.0
+    }
+  },
+  "pool": {
+    "n_contracts_in_pool": 74,
+    "n_accounts_with_churn": 69,
+    "total_cancelled_acv": 3148224,
+    "capacity_main": 30
+  },
+  "portfolio": {
+    "review_date": "2026-04-01",
+    "expiry_range": "2026-04-02 to 2026-06-30",
+    "followup_complete": "2026-09-28",
+    "n_review_window_contracts": 1540,
+    "n_review_window_accounts": 1237,
+    "n_review_eligible": 1540,
+    "n_review_eligible_accounts": 1237,
+    "n_manual_pending": 4,
+    "n_cancelled_contracts": 74,
+    "n_cancelled_accounts": 69,
+    "total_cancelled_acv": 3148224
+  },
+  "arr": {
+    "period": "2024-10-01 → 2025-09-30",
+    "opening_arr_m": 850.0,
+    "closing_arr_m": 957.1,
+    "grr": 95.95,
+    "nrr": 98.58,
+    "new_business_m": 115.6,
+    "expansion_m": 9.9,
+    "contraction_m": -3.1,
+    "account_churn_m": 9.7,
+    "partial_loss_m": 21.5,
+    "reactivation_m": 3.6,
+    "renewal_gap_m": 11.3,
+    "intra_unresolved_m": 1.09,
+    "combined_react_gap_m": 16.0,
+    "residual": 0.0,
+    "n_opening": 5725,
+    "n_closing": 6584
+  },
+  "growth": {
+    "full_hist_expansion_m": 54.1,
+    "full_hist_contraction_m": 17.2,
+    "qty_dominant_pct": 88.5,
+    "n_cross_sell_unverified": 23
+  },
+  "assumptions": {
+    "annual_risk_anchors": {
+      "smb": 8.0,
+      "midmarket": 5.0,
+      "enterprise": 2.5,
+      "large_enterprise": 1.0
+    },
+    "term_mix": {
+      "smb": {
+        "yr1": 0.7,
+        "yr2": 0.2,
+        "yr3": 0.1
+      },
+      "midmarket": {
+        "yr1": 0.45,
+        "yr2": 0.35,
+        "yr3": 0.2
+      },
+      "enterprise": {
+        "yr1": 0.25,
+        "yr2": 0.35,
+        "yr3": 0.4
+      },
+      "large_enterprise": {
+        "yr1": 0.15,
+        "yr2": 0.3,
+        "yr3": 0.55
+      }
+    },
+    "three_year_smb_pct": 22.13,
+    "n_accounts": 10000,
+    "n_parents": 9125,
+    "scenario": {
+      "enabled": true,
+      "version": "interaction_demo_v1",
+      "reference_population": 20000,
+      "shared_coverage_weight": 0.75,
+      "deployment_value_failure": 3.2,
+      "deterioration_with_incomplete_reach": 2.2,
+      "commercial_value_conflict": 1.2,
+      "service_with_deployment_problem": 0.8
+    },
+    "seed": 137
+  },
+  "example_account": {
+    "purchasing_account": "CA00009456",
+    "contract_id": "CTR0000056312",
+    "lineage_id": "LIN0000023578",
+    "product_id": "PA-ACCESS-N",
+    "product_family": "SASE",
+    "size_segment": "smb",
+    "industry": "Retail",
+    "region": "EMEA",
+    "term_start": "2025-06-24",
+    "term_end": "2026-06-24",
+    "original_prediction_date": "2026-03-26",
+    "portfolio_review_date": "2026-04-01",
+    "score_age_days": 6,
+    "days_to_expiry_at_review": 84,
+    "acv": 13941,
+    "model_score": 0.7572,
+    "rule_score": 0.4968,
+    "churned": 1,
+    "label_available_at": "2026-09-22",
+    "deployment_reach_30d": 5.0,
+    "workflow_success_30d": 45.2,
+    "avg_coverage_90d": 7.8,
+    "p1_tickets_90d": 0,
+    "onboarding_delay_days": 0,
+    "dated_budget_concern": 0,
+    "quoted_unit_price_change_pct": 2.88,
+    "clearance_status": "review_ready_not_contact_cleared: 4 manual checks remain",
+    "product_name": "Prisma Access Remote Networks",
+    "proposed_action": "Confirm the cause of poor deployment and unsuccessful workflows, agree an owner and a pre-expiry recovery milestone."
+  },
+  "pilot_power": {
+    "baseline_rate": 0.15,
+    "target_rate": 0.09,
+    "absolute_reduction_pp": 6.0,
+    "alpha": 0.05,
+    "power": 0.8,
+    "n_per_arm_independent": 460,
+    "note": "Standard two-proportion z-test, two-sided alpha=0.05, power=0.80. Independent units assumed — clustering by parent org will increase required n. 100–150 per arm is a feasibility enrollment estimate, not a powered threshold."
+  },
+  "ablation": [
+    {
+      "experiment": "full_context",
+      "block": "block_deployment",
+      "features_removed": "deployment_reach_30d, deployment_reach_30d_missing, onboarding_delay_days",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.3346",
+      "ap_drop": "-0.0064"
+    },
+    {
+      "experiment": "full_context",
+      "block": "block_value",
+      "features_removed": "workflow_success_30d, workflow_success_30d_missing, productive_use_delta_30d",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.2436",
+      "ap_drop": "0.0846"
+    },
+    {
+      "experiment": "full_context",
+      "block": "block_telemetry",
+      "features_removed": "avg_coverage_90d, coverage_trend_90d, obs_completeness_90d",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.324",
+      "ap_drop": "0.0042"
+    },
+    {
+      "experiment": "full_context",
+      "block": "block_service",
+      "features_removed": "unresolved_customer_impact_hours_90d, repeat_sla_breaches_90d, p1_tickets_90d, open_tickets_90d, avg_open_age_hrs_90d, avg_resolution_hrs_90d, avg_resolution_hrs_90d_missing",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.3267",
+      "ap_drop": "0.0015"
+    },
+    {
+      "experiment": "full_context",
+      "block": "block_commercial",
+      "features_removed": "quoted_unit_price_change_pct, dated_budget_concern, days_to_renewal, tenure_days",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.324",
+      "ap_drop": "0.0042"
+    },
+    {
+      "experiment": "full_context",
+      "block": "block_relationship",
+      "features_removed": "days_without_confirmed_owner, overdue_agreed_actions, days_since_last_interaction_missing, median_prior_renewal_delay_missing",
+      "method": "retrain_hgb_without_block",
+      "baseline_ap": "0.3282",
+      "ablated_ap": "0.3272",
+      "ap_drop": "0.001"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+model,n_shuffles,mean_shuffled_ap,std_shuffled_ap,note
+full_context_hgb,5,0.0606165466126081,0.006378786246096511,Tests score sensitivity to label permutation. Does NOT test training-set label leakage (that would require re-fitting with permuted labels).

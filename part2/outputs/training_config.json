@@ -1,0 +1,171 @@
+{
+  "part1_run_id": "025c13a1-7008-4dd2-9ab6-a2758790478c",
+  "train_dates": [
+    "2023-10-01",
+    "2024-10-01"
+  ],
+  "n_train": 4762,
+  "n_positives": 286,
+  "prevalence": 0.060059,
+  "experiments": {
+    "experience_led": {
+      "numeric": [
+        "deployment_reach_30d",
+        "onboarding_delay_days",
+        "workflow_success_30d",
+        "productive_use_delta_30d",
+        "unresolved_customer_impact_hours_90d",
+        "repeat_sla_breaches_90d",
+        "p1_tickets_90d",
+        "open_tickets_90d",
+        "avg_open_age_hrs_90d",
+        "avg_resolution_hrs_90d",
+        "avg_coverage_90d",
+        "coverage_trend_90d",
+        "obs_completeness_90d",
+        "quoted_unit_price_change_pct",
+        "dated_budget_concern",
+        "days_without_confirmed_owner",
+        "overdue_agreed_actions",
+        "days_to_renewal",
+        "tenure_days",
+        "avg_resolution_hrs_90d_missing",
+        "deployment_reach_30d_missing",
+        "workflow_success_30d_missing",
+        "days_since_last_interaction_missing",
+        "median_prior_renewal_delay_missing"
+      ],
+      "categorical": [
+        "product_family"
+      ]
+    },
+    "size_value": {
+      "numeric": [
+        "employee_count",
+        "acv",
+        "total_acv_in_window",
+        "days_to_renewal",
+        "tenure_days",
+        "n_products_in_window",
+        "n_families_in_window"
+      ],
+      "categorical": [
+        "size_segment",
+        "industry",
+        "region",
+        "product_family"
+      ]
+    },
+    "full_context": {
+      "numeric": [
+        "deployment_reach_30d",
+        "onboarding_delay_days",
+        "workflow_success_30d",
+        "productive_use_delta_30d",
+        "unresolved_customer_impact_hours_90d",
+        "repeat_sla_breaches_90d",
+        "p1_tickets_90d",
+        "open_tickets_90d",
+        "avg_open_age_hrs_90d",
+        "avg_resolution_hrs_90d",
+        "avg_coverage_90d",
+        "coverage_trend_90d",
+        "obs_completeness_90d",
+        "quoted_unit_price_change_pct",
+        "dated_budget_concern",
+        "days_without_confirmed_owner",
+        "overdue_agreed_actions",
+        "days_to_renewal",
+        "tenure_days",
+        "avg_resolution_hrs_90d_missing",
+        "deployment_reach_30d_missing",
+        "workflow_success_30d_missing",
+        "days_since_last_interaction_missing",
+        "median_prior_renewal_delay_missing",
+        "employee_count",
+        "acv",
+        "total_acv_in_window",
+        "n_products_in_window",
+        "n_families_in_window",
+        "n_active_products_in_family",
+        "family_sibling_cancellations_1yr",
+        "family_adoption_completeness",
+        "executive_interactions_180d",
+        "marketing_engagements_180d",
+        "days_since_last_interaction",
+        "median_prior_renewal_delay_days",
+        "tickets_90d",
+        "policy_events_per_unit_90d",
+        "remediation_velocity_90d",
+        "automation_adoption_90d",
+        "scan_success_rate_90d"
+      ],
+      "categorical": [
+        "product_family",
+        "size_segment",
+        "industry",
+        "region"
+      ]
+    }
+  },
+  "lr_grid": [
+    {
+      "C": 0.01,
+      "class_weight": null
+    },
+    {
+      "C": 0.01,
+      "class_weight": "balanced"
+    },
+    {
+      "C": 0.1,
+      "class_weight": null
+    },
+    {
+      "C": 0.1,
+      "class_weight": "balanced"
+    },
+    {
+      "C": 1.0,
+      "class_weight": null
+    },
+    {
+      "C": 1.0,
+      "class_weight": "balanced"
+    }
+  ],
+  "hgb_grid": [
+    {
+      "max_depth": 3,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "max_iter": 100,
+      "class_weight": null
+    },
+    {
+      "max_depth": 3,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "max_iter": 100,
+      "class_weight": "balanced"
+    },
+    {
+      "max_depth": 4,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 10,
+      "max_iter": 150,
+      "class_weight": null
+    },
+    {
+      "max_depth": 4,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 10,
+      "max_iter": 150,
+      "class_weight": "balanced"
+    }
+  ],
+  "imputation_values": {
+    "days_since_last_interaction_median": 69.0,
+    "note": "Fitted on training split only (2023-10-01 + 2024-10-01). Load from this file in evaluate.py and prioritize.py. Do not refit outside training."
+  }
+}

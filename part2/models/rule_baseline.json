@@ -1,0 +1,15 @@
+{
+  "type": "rule_baseline",
+  "weights": {
+    "deployment_gap": 0.35,
+    "value_decline": 0.3,
+    "service_pain": 0.25,
+    "commercial_concern": 0.1
+  },
+  "normalization": {
+    "impact_hours_ceiling": 720.0,
+    "sla_breaches_ceiling": 3.0
+  },
+  "removed_term": "missing_telemetry_pct_90d removed (main scenario: reliable reporting; term was constant near-zero and carried no predictive signal).",
+  "note": "Import apply_rule_baseline from _rule_baseline.py; do not re-implement."
+}

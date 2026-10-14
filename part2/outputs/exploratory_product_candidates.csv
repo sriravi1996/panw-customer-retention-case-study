@@ -1,0 +1,7 @@
+family_A,family_B,n_companies_both,n_companies_A,n_companies_B,pct_A_also_has_B,pct_B_also_has_A,portfolio_snapshot_date,analysis_type,caution
+SASE,Strata,704,2180,4409,32.29,15.97,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.
+Cortex,Strata,598,1951,4409,30.65,13.56,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.
+Prisma,Strata,567,1726,4409,32.85,12.86,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.
+Cortex,SASE,462,1951,2180,23.68,21.19,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.
+Prisma,SASE,401,1726,2180,23.23,18.39,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.
+Cortex,Prisma,356,1951,1726,18.25,20.63,2026-10-01,exploratory_association_only,Co-ownership does not imply causation or predict future cross-sell. These are observed portfolio overlaps only.

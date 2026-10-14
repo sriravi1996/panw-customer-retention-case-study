@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-14",
+  "analysis_inputs_outputs_verified": 33,
+  "part1_validation": "35/35 passed",
+  "current_pytest": "42 passed, 6 retired-snapshot checks skipped",
+  "model_data_changed": false,
+  "packaging_changes": [
+    "Removed stale decks, retired stages, render caches and private audit backups",
+    "Removed two tests tied only to private backup history",
+    "Made presentation module imports configurable",
+    "Updated submission documentation and download instructions"
+  ],
+  "presentation_sha256": "ec471194b7828f3f31946520c6d4de4cf5d39cc5db34b08163a5c527c6e37e3a"
+}

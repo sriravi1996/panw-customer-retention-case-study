@@ -1,0 +1,77 @@
+{
+  "run_timestamp": "2026-10-14T14:51:09.995363",
+  "key_findings_stats": {
+    "tenure_churn_pct": {
+      "under_2yr": 6.0,
+      "2_to_3yr": 4.6,
+      "over_3yr": 3.7
+    },
+    "p1_ticket_churn_pct": 6.4,
+    "no_p1_ticket_churn_pct": 4.4,
+    "n_contracts_with_p1": 1100,
+    "n_contracts_without_p1": 10475
+  },
+  "required_answers": {
+    "A_top20_most_ordered_items": {
+      "ranking_metric": "distinct_order_count",
+      "eligible_cohort": "completed and partial orders only",
+      "export": "outputs/eda_top20_ordered_items.csv",
+      "chart": "figures/top20_ordered_items.png",
+      "top1": {
+        "product": "Enhanced Support",
+        "order_count": 12713,
+        "companies": 4758,
+        "net_sales": 407863316
+      }
+    },
+    "B_highest_aov_customer": {
+      "company_level": {
+        "highest_aov_company": {
+          "company_id": "CA00003516",
+          "account_name": "Richardson, Wood and Durham",
+          "size_segment": "large_enterprise",
+          "aov": 20070327.68,
+          "order_count": 1,
+          "total_sales": 20070327.68,
+          "top_product_by_net_sales": "Prisma Cloud CWP",
+          "top_product_by_frequency": "Prisma Cloud CWP"
+        },
+        "highest_aov_company_min2_orders": {
+          "company_id": "CA00002840",
+          "account_name": "Williams, Hull and Chan",
+          "aov": 11081239.76,
+          "order_count": 3
+        },
+        "most_frequent_buyer_company": {
+          "company_id": "CA00001276",
+          "order_count": 34,
+          "total_sales": 414442.69
+        },
+        "highest_spend_company": {
+          "company_id": "CA00008309",
+          "total_sales": 80370496.76,
+          "order_count": 12,
+          "aov": 6697541.4
+        }
+      },
+      "user_level": {
+        "highest_aov_user": {
+          "user_id": "U000010112",
+          "aov": 20746145.53,
+          "order_count": 1,
+          "total_sales": 20746145.53
+        }
+      }
+    }
+  },
+  "charts_exported": [
+    "figures/top20_ordered_items.png",
+    "figures/aov_by_company.png",
+    "figures/product_family_penetration.png",
+    "figures/company_size_mix.png",
+    "figures/churn_by_segment.png",
+    "figures/revenue_concentration.png",
+    "figures/deployment_coverage_trend.png",
+    "figures/company_examples.png"
+  ]
+}

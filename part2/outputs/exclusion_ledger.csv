@@ -1,0 +1,7 @@
+feature,n_present_total,pct_present_total,n_present_train,pct_present_train,n_present_scoring,pct_present_scoring
+avg_coverage_90d,23091,1.0,6711,1.0,3223,1.0
+workflow_success_30d,23091,1.0,6711,1.0,3223,1.0
+tickets_90d,23091,1.0,6711,1.0,3223,1.0
+days_since_last_interaction,20992,0.9091,5321,0.7929,3099,0.9615
+quoted_unit_price_change_pct,23091,1.0,6711,1.0,3223,1.0
+deployment_reach_30d,23091,1.0,6711,1.0,3223,1.0

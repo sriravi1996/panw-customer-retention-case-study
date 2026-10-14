@@ -1,0 +1,51 @@
+{
+  "section1_expansion_decomposition": {
+    "method": "net_acv minus prior_net_acv (ACV delta); term-only changes excluded. Driver classification uses actual predecessor quantity/unit_price via predecessor_contract_id join (fix #1).",
+    "n_renewals_with_prior_acv": 22248,
+    "n_expansion_events": 14486,
+    "n_contraction_events": 7761,
+    "n_neutral_renewals": 1,
+    "total_expansion_acv": 54149139.55,
+    "total_contraction_acv": -17160368.79,
+    "n_new_product_in_family_verified": 0,
+    "n_new_product_in_family_unverified": 11,
+    "n_new_prod_excluded_initial_basket": 2104,
+    "total_verified_expansion_events": 14486,
+    "total_verified_expansion_acv": 54149139.55,
+    "total_unverified_expansion_acv": 1114028.6,
+    "by_driver_verified": {
+      "quantity_expansion": {
+        "n_events": 5327,
+        "total_expansion_acv": 47903573.3,
+        "pct_of_verified_expansion": 88.47
+      },
+      "price_expansion": {
+        "n_events": 9159,
+        "total_expansion_acv": 6245566.250000002,
+        "pct_of_verified_expansion": 11.53
+      }
+    }
+  },
+  "section2_coownership_basket": {
+    "portfolio_snapshot_date": "2026-10-01",
+    "n_active_company_family_pairs": 10266,
+    "n_historical_pairs_excluded": 980,
+    "n_pairs_above_threshold": 6,
+    "threshold_min_companies": 30,
+    "warning": "Co-ownership rates are exploratory associations only. Not causal cross-sell predictions.",
+    "top_pair": {
+      "family_A": "SASE",
+      "family_B": "Strata",
+      "n_companies_both": 704
+    }
+  },
+  "section3_crosssell_events": {
+    "total": 23,
+    "verified": 0,
+    "unverified_truncated_history": 23,
+    "unverified_invalid_predecessor_date": 0,
+    "excluded_initial_basket": 3009,
+    "verified_cross_sells": 0,
+    "verdict": "0 verified cross-sell events in this dataset. 23 apparent cross-sell events are unverified (truncated purchase history; predecessor date unavailable or invalid \u2014 not genuine new-family acquisitions)."
+  }
+}

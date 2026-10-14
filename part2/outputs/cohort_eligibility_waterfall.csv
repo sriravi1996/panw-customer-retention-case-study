@@ -1,0 +1,8 @@
+stage,n_contracts,n_companies,n_positives,note
+1_all_subscription_eligible,16031,6207,663,"All subscription contracts with pred_date in [OBS_START, OBS_END]"
+2_within_obs_window,16031,6207,663,pred_date <= 2026-10-01
+3_labeled_outcomes_known,12808,4693,663,label_available_at <= 2026-10-01
+4_review_window_raw,1540,1237,74,"term_end in (2026-04-01, 2026-06-30]"
+4b_excluded_decision_known_at_pred_date,0,0,0,Already-known renewal/cancellation by pred_date (before D)
+4c_excluded_decision_known_at_D,0,0,0,Decision event recorded with event_date < D=2026-04-01 (regression fixture: expect 0)
+5_review_eligible_contracts,1540,1237,74,Review cohort after decision-date checks; all accounts assumed directly managed
